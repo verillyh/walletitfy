@@ -13,13 +13,26 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.scss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.png$/i,
+                type: 'asset/resource'
             }
         ]
     },
     plugins: [new HTMLWebpackPlugin({
         filename: "index.html",
         template: "src/index.html"
-    })]
+    })],
+    devServer: {
+        port: 5500,
+        watchFiles: ["src/*"]
+    },
+    ignoreWarnings: [
+        {
+            module: /node_modules/
+        },
+    ],
 }

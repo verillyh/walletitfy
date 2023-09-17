@@ -2,11 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./../dist/main.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <h1>test</h1>
+    <nav class="navbar navbar-horizontal navbar-expand-lg bg-primary-lighter">
+        <div class="container-fluid h-100 d-flex align-items-center justify-content-center">
+            <a href="#" class="navbar-brand brand d-flex align-items-center"><img alt="logo icon" class="logo" id="logo">Walletitfy</a>
+        </div>
+    </nav>
+    <main class="d-flex h-100">
+        <section class="login-card d-flex flex-column justify-content-between align-items-center bg-primary-lighter rounded">
+           <h1>Login</h1>
+            <form method="post" class="form d-flex justify-content-between flex-column">
+                <div class="form-container form-floating">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control username" aria-describedby="username">
+                </div>
+                <div class="form-container form-floating">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control password" aria-describedby="password">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-md">Login</button>
+            </form>
+        </section>
+    </main>
+    <!-- <div>Icon is made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>  -->
 </body>
-</html>
+</html>     
