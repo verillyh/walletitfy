@@ -4,35 +4,38 @@ var HTMLWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
     entry: {
-        main: path.resolve(__dirname, "src/index.js")
+        index: path.resolve(__dirname, "src/view/index.js")
     },
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        filename: '[name].js'
+        filename: '[name].js',
+        assetModuleFilename: '[name][ext]',
+        clean: true
     },
     module: {
         rules: [
             {
-                test: /\.scss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
                 test: /\.png$/i,
                 type: 'asset/resource'
-            }
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader", "postcss-loader"],
+            },
         ]
     },
     plugins: [new HTMLWebpackPlugin({
         filename: "index.html",
-        template: "src/index.html"
+        template: "src/view/login.html"
     })],
     devServer: {
+        static: ["./dist"],
         port: 5500,
         watchFiles: ["src/*"]
     },
     ignoreWarnings: [
         {
-            module: /node_modules/
+            module: /node_modules/  
         },
     ],
 }

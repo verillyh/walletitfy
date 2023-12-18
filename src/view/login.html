@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Login to your account">
+    <meta name="keywords" content="Login, Sign in">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <title>Login - Walletitfy</title>
+</head>
+<body class="flex flex-col justify-between">
+    <header class="flex bg-primary-lighter flex-row justify-center py-5">
+        <a href="#" class="flex flex-row items-center gap-2 -translate-y-1">
+            <img alt="logo icon" class="h-7 w-7" id="logo">
+            <p class="font-hammersmith text-2xl leading-none translate-y-1">Walletitfy</p>
+        </a>
+    </header>
+
+<main class="flex flex-col m-auto bg-primary-lighter w-2/6 p-6 rounded-md items-center relative bottom-10">
+           <h1 class="font-habibi text-4xl mb-8 tracking-wide">Login</h1>
+            <form method="post" action="./../src/controller/login.php" class="flex justify-between w-full items-center flex-col w-full">
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="Username" class="input peer" aria-describedby="username">
+                    <label for="username" class="input-label peer-placeholder-shown:absolute peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray transition-all ">Username</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Password" aria-describedby="password" class="peer input">
+                    <label for="password" class="input-label peer-placeholder-shown:absolute peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray transition-all ">Password</label>
+                </div>
+                <button type="submit" class="text-primary bg-secondary font-inter p-4 w-52 rounded-full ">Login</button>
+            </form>
+            <p class="mt-8">Don't have an account? <a href="signup.html" class="text-purple-lighter underline">Sign Up</a></p>
+    </main>
+
+    <footer>
+
+</footer>
+<!-- <div>Icon is made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>  -->
+</body>
+</html>     
